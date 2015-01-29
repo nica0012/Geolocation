@@ -23,14 +23,15 @@ document.addEventListener("DOMContentLoaded", function(){
 function reportPosition( position ){ 
 //        html += '<p>' + 'Currently at Algonquin College, we are experiencing some' + '</p>';
     
-  var output = document.querySelector("#output");
+  var output = document.body;
+    
   output.innerHTML += "<strong>Latitude:</strong> " + position.coords.latitude + "&deg;<br/>"
   + "<strong>Longitude:</strong> " + position.coords.longitude + "&deg;<br/>"
   + "<strong>Accuracy:</strong> " + position.coords.accuracy + "m<br/>"
   + "<strong>Altitude:</strong> " + position.coords.altitude + " m<br/>"
   + "<strong>Heading:</strong> " + position.coords.heading + " &deg;<br/>"
   + "<strong>Speed:</strong> " + position.coords.speed + " m/s<br/>"
-  + "<strong>Timestamp:</strong> " + position.timestamp;
+  + "<strong>Timestamp:</strong> " + position.timestamp + "<br>";
     
 var canvs = document.createElement("canvas");
 document.body.appendChild(canvs);
